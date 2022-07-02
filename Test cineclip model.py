@@ -123,7 +123,7 @@ for idx in range(len(df_test)):
     save_dir = file.replace(file.split('/')[-1],'')
     fmap = np.load(save_dir + 'vid_fmap_GAP_densenet.npy')
     np.save(df_test.loc[idx,'Pfolder']+ 'vid_fmap_GAP_densenet.npy', fmap)
-    famp = np.load(df_test.loc[idx,'Pfolder']+ 'vid_fmap_GAP_densenet.npy')
+    fmap = np.load(df_test.loc[idx,'Pfolder']+ 'vid_fmap_GAP_densenet.npy')
     X_test.append(W*np.max(fmap,0))
     Y_test.append(df_test.loc[idx,'Malignancy'])
 
